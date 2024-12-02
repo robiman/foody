@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:foody/features/boarding/views/boarding_page.dart';
 import 'package:foody/utils/theme/app_theme.dart';
+import 'package:get/get.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
-
 class MyApp extends StatelessWidget{
-  const MyApp();
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context){
-    return  MaterialApp(
+    return  GetMaterialApp(
       theme:AppTheme.appTheme,
       home: const Scaffold(
-       body: Center(child: Text("This is Foody App for your restraunt"),),
+       body: BoardingPage(),
       ),
     );
   }

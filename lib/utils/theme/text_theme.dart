@@ -5,7 +5,7 @@ class AppTextTheme{
   AppTextTheme._();
 
   static final TextTheme appTextTheme = TextTheme(
-    bodyLarge: TextStyle(fontSize: 14,color: AppColor.primaryColor),
+    bodyLarge: const TextStyle(fontSize: 14,color: AppColor.primaryColor),
     headlineLarge: const TextStyle().copyWith(fontSize: 32.0,fontWeight: FontWeight.bold,color:AppColor.primaryColor),
     headlineMedium: const TextStyle().copyWith(fontSize: 24.0,fontWeight: FontWeight.bold,color:AppColor.primaryColor),
     headlineSmall: const TextStyle().copyWith(fontSize: 18.0,fontWeight: FontWeight.bold,color:AppColor.primaryColor),

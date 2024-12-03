@@ -15,9 +15,8 @@ class BoardingPage extends StatelessWidget{
     final controller = Get.put(BoardingController());
     return Scaffold(
       body: Stack(children: [
-
         Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16.0,vertical: 30.0),
           child: PageView(
             controller: controller.pageController,
             onPageChanged: controller.updatePageIndicator,
@@ -29,8 +28,8 @@ class BoardingPage extends StatelessWidget{
           ),
         ),
         Positioned(top: kToolbarHeight,right: 8.0,child: TextButton(onPressed: (){},child:  Text("Skip",style: Theme.of(context).textTheme.bodyLarge,),),),
-        Positioned(bottom: kBottomNavigationBarHeight+25,left: 16.0,child: SmoothPageIndicator(onDotClicked: controller.dotNavigationClick,controller: controller.pageController, count: 2,effect: const ExpandingDotsEffect(activeDotColor: AppColor.primaryColor,dotHeight: 6),)),
-        Positioned(bottom:kBottomNavigationBarHeight+25,right:16.0,child: ElevatedButton(onPressed: controller.nextPage,style: ElevatedButton.styleFrom(shape: const CircleBorder(),backgroundColor: AppColor.primaryColor,foregroundColor: Colors.white),child: const Icon(Icons.chevron_right),))
+        Positioned(bottom: kBottomNavigationBarHeight+25,left: 16.0,child: SmoothPageIndicator(onDotClicked: controller.dotNavigationClick,controller: controller.pageController, count: 2,effect: const ExpandingDotsEffect(activeDotColor: AppColor.secondryColor,dotHeight: 6),)),
+        Positioned(bottom:kBottomNavigationBarHeight+15,right:16.0,child: ElevatedButton(onPressed: controller.nextPage,style: ElevatedButton.styleFrom(shape: const CircleBorder(),backgroundColor: AppColor.secondryColor,foregroundColor: Colors.white),child: const Icon(Icons.chevron_right),))
       ],),
     );
   }

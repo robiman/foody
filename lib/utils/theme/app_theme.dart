@@ -7,8 +7,11 @@ class AppTheme{
   static final ThemeData appTheme = ThemeData(
     fontFamily: "Manrope",
     scaffoldBackgroundColor: AppColor.bgColor,
+    bottomAppBarColor: Colors.white,
     primaryColor: AppColor.primaryColor,
     textTheme: AppTextTheme.appTextTheme,
-    inputDecorationTheme: AppInputTheme.appInputTheme
+    inputDecorationTheme: AppInputTheme.appInputTheme,
+    navigationBarTheme:const NavigationBarThemeData(backgroundColor: Colors.transparent),
+
   );
 }

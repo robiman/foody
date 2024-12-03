@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:foody/features/home/views/home_page.dart';
 import 'package:get/get.dart';
 
 class BoardingController extends GetxController{
@@ -19,6 +20,8 @@ class BoardingController extends GetxController{
    if(currentPageIndex.value == 0){
     pageController.jumpToPage(currentPageIndex.value+1);
     currentPageIndex.value =1;
+   }else{
+     Get.to(HomePage());
    }
   }
 
